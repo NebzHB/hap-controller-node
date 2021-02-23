@@ -8,7 +8,10 @@ module.exports = {
     'mocha': true,
     'node': true
   },
-  'extends': 'eslint:recommended',
+  'extends': [
+    'eslint:recommended',
+    'prettier'
+  ],
   'parser': 'babel-eslint',
   'parserOptions': {
     'sourceType': 'module'
@@ -95,10 +98,7 @@ module.exports = {
     ],
     'max-len': [
       'error',
-      {
-        'code': 80,
-        'ignoreTemplateLiterals': true
-      }
+      100
     ],
     'multiline-ternary': [
       'error',
@@ -150,7 +150,7 @@ module.exports = {
     ],
     'object-curly-spacing': [
       'error',
-      'never'
+      'always'
     ],
     'object-property-newline': [
       'error',
